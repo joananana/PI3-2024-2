@@ -19,8 +19,11 @@
 #define GATEWAY_ADDR   "192.168.0.1"    // Gateway (IP do roteador)
 #define NETMASK_ADDR   "255.255.255.0"  // Máscara de sub-rede
 
-volatile int tempSensorValue = 0; // Teste inicial
-volatile int flowSensorValue = 0; // Teste inicial
+#define GPIO_OUTPUT_PIN_SEL  ((1ULL<<GPIO_NUM_12) | (1ULL<<GPIO_NUM_13))
+#define GPIO_INPUT_PIN_SEL  ((1ULL<<GPIO_NUM_14) | (1ULL<<GPIO_NUM_27))
+
+volatile int led_12_state = 0;
+volatile int led_13_state = 0;
 
 
 static const char* htmlPage = "<!DOCTYPE html>"
@@ -91,10 +94,10 @@ static esp_err_t data_get_handler(httpd_req_t *req) {
     if (httpd_req_get_url_query_str(req, param, sizeof(param)) == ESP_OK) {
         if (strstr(param, "tipo=temperatura")) {
             // Código para leitura do sensor de temperatura
-            snprintf(sensor_data, sizeof(sensor_data), "%d", tempSensorValue);
+            snprintf(sensor_data, sizeof(sensor_data), "%d", gpio_get_level(GPIO_NUM_14));
         } else if (strstr(param, "tipo=fluxo")) {
             // Código para leitura do sensor de umidade
-            snprintf(sensor_data, sizeof(sensor_data), "%d", flowSensorValue);
+            snprintf(sensor_data, sizeof(sensor_data), "%d", gpio_get_level(GPIO_NUM_27));
         }
     }
     httpd_resp_send(req, sensor_data, HTTPD_RESP_USE_STRLEN);
@@ -107,10 +110,12 @@ static esp_err_t command_get_handler(httpd_req_t *req) {
     if (httpd_req_get_url_query_str(req, param, sizeof(param)) == ESP_OK) {
         if (strstr(param, "tipo=command1")) {
             // Código para leitura do sensor de temperatura
-            tempSensorValue = 0;
+            led_12_state = !led_12_state;
+            gpio_set_level(GPIO_NUM_12, led_12_state);
         } else if (strstr(param, "tipo=command2")) {
-            // Código para leitura do sensor de umidade
-            flowSensorValue = 0;
+            // Código para leitura do sensor de temperatura
+            led_13_state = !led_13_state;
+            gpio_set_level(GPIO_NUM_13, led_13_state);
         }
     }
     httpd_resp_send(req, "Comando recebido", HTTPD_RESP_USE_STRLEN);
@@ -152,23 +157,33 @@ void app_main(void) {
     wifi_init();            // Inicializa o Wi-Fi
     start_webserver();      // Inicia o servidor HTTP
     
-    gpio_set_direction(GPIO_NUM_2, GPIO_MODE_OUTPUT); // Teste inicial
+    /*GPIO OUTPUT CONFIG*/
+    //zero-initialize the config structure.
+    gpio_config_t io_conf = {};
+    //disable interrupt
+    io_conf.intr_type = GPIO_INTR_DISABLE;
+    //set as output mode
+    io_conf.mode = GPIO_MODE_OUTPUT;
+    //bit mask of the pins that you want to set,e.g.GPIO18/19
+    io_conf.pin_bit_mask = GPIO_OUTPUT_PIN_SEL;
+    //disable pull-down mode
+    io_conf.pull_down_en = 0;
+    //disable pull-up mode
+    io_conf.pull_up_en = 0;
+    //configure GPIO with the given settings
+    gpio_config(&io_conf);
     
-    while(1){
-		
-		// Contador teste inicial
-		if(tempSensorValue >= 255){
-			tempSensorValue = 0;
-		}
-		
-		if(flowSensorValue >= 255){
-			flowSensorValue = 0;
-		}
-		tempSensorValue++;
-		flowSensorValue++;
-		
-		vTaskDelay(1000 / portTICK_PERIOD_MS);
-		
-	}
+    /*GPIO INPUT CONFIG*/
+    //disable interrupt
+    io_conf.intr_type = GPIO_INTR_DISABLE;
+    //set as input mode
+    io_conf.mode = GPIO_MODE_INPUT;
+    //bit mask of the pins that you want to set,e.g.GPIO18/19
+    io_conf.pin_bit_mask = GPIO_INPUT_PIN_SEL;
+    //disable pull-up mode
+    io_conf.pull_up_en = 1;
+    //configure GPIO with the given settings
+    gpio_config(&io_conf);
+   
 }
 
