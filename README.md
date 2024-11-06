@@ -166,3 +166,33 @@ Este terminal utiliza um conector D-Sub 15 pinos para comunicação com a interf
 | Válvula proporcional para controle de vazão | V106    | UA2                 | X2.2       |
 
 O restante dos pinos são utilizados para alimentação e referência ou não são utilizados.
+
+## Fluxograma do Sistema
+
+O fluxograma apresentado abaixo descreve o processo de funcionamento da interface microcontrolada para a bancada MPS Festo com comunicação via Wi-Fi. Esse sistema visa gerenciar a comunicação e o controle de dispositivos da bancada de forma eficiente e prática.
+
+![Fluxograma](https://github.com/joananana/PI3-2024-2/blob/main/imagens/Fluxograma%20Firmware.drawio.png)
+
+
+
+**Início**: O sistema é inicializado. Nesta fase, o ESP32 é ligado e começa a executar o código que controla o processo.
+
+
+**Conecta Wi-Fi**: O próximo passo é estabelecer uma conexão Wi-Fi. Essa conexão é essencial, pois será utilizada para a comunicação remota entre o microcontrolador e o sistema de controle, permitindo o monitoramento e o envio de comandos para a bancada.
+
+
+**Inicia Servidor WEB**: Após a conexão com a rede Wi-Fi, o sistema inicia um servidor web. Esse servidor permite que dispositivos externos acessem e controlem a bancada por meio de uma interface web, onde será possível enviar comandos e receber dados sobre as variáveis do processo, como temperatura, pressão e fluxo.
+
+
+**Configura Periféricos (ADC, Timers, GPIO)**: Nesta etapa, o microcontrolador configura os periféricos necessários, incluindo o conversor analógico-digital (ADC) para leitura de sensores, temporizadores para o controle de tarefas periódicas e os pinos de entrada/saída digital (GPIO) para o controle de atuadores e leitura de sensores digitais.
+
+
+**Requisição de Dados?**: Uma vez que o sistema está configurado e em operação, ele monitora constantemente se há uma requisição de dados. Esse ponto de decisão verifica se o sistema recebeu uma solicitação de dados de algum dispositivo externo.
+Caso não haja uma requisição de dados, o sistema retorna para o estado de espera, aguardando novas solicitações. Se houver uma requisição, o sistema processa o pedido.
+
+
+**Retorna Dado**: Se uma requisição é identificada, o microcontrolador processa as informações solicitadas (como leituras de sensores ou estados dos atuadores) e as envia de volta ao dispositivo solicitante via servidor web, permitindo o monitoramento remoto em tempo real.
+
+
+
+Esse fluxograma representa um sistema eficiente para o controle remoto da bancada MPS Festo usando um microcontrolador com conectividade Wi-Fi. Esse processo garante que o usuário consiga acessar e controlar a bancada remotamente, monitorando e ajustando os parâmetros em tempo real por meio de uma interface web. A interface microcontrolada desenvolvida com esse fluxograma proporciona maior flexibilidade e autonomia para o gerenciamento dos processos na bancada, além de melhorar a integração com sistemas de controle personalizados.
