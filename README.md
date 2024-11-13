@@ -115,10 +115,22 @@ Dessa forma, utilizando as informações encontradas no datasheet da bancada e s
 
 O terminal I/O digital trabalha com uma tensão de 24V, a qual precisaremos adequar para trabalhar com nosso microcontrolador que trabalha com tensão de 3.3V.
 
-### Tabela 3 - Entradas Digitais XMA1
+### Tabela 3 - Entradas e Saídas Digitais XMA1
 
 | Descrição                                | Símbolo | Atribuição de pinos | Referência |
 |------------------------------------------|---------|---------------------|------------|
+| Acionamento válvula esférica             | M102    | O0                  | XMA1.1     |
+| Aquecedor                                | E104    | O1                  | XMA1.2     |
+| Relé controle analógico da bomba         | K1      | O2                  | XMA1.3     |
+| Relé controle binário da bomba           | M1      | O3                  | XMA1.4     |
+| Acionamento válvula proporcional         | M106    | O4                  | XMA1.5     |
+| N/A                                      | N/A     | O5                  | XMA1.6     |
+| N/A                                      | N/A     | O6                  | XMA1.7     |
+| N/A                                      | N/A     | O7                  | XMA1.8     |
+| N/A                                      | 24V A   | 24V                 | XMA1.9     |
+| N/A                                      | 24V A   | 24V                 | XMA1.10    |
+| N/A                                      | GND A   | GND                 | XMA1.11    |
+| N/A                                      | GND A   | GND                 | XMA1.12    |
 | Sensor de vazão                          | B102    | I0                  | XMA1.13    |
 | Interruptor de nível tipo boia           | S111    | I1                  | XMA1.14    |
 | Interruptor de nível tipo boia           | S112    | I2                  | XMA1.15    |
@@ -127,21 +139,10 @@ O terminal I/O digital trabalha com uma tensão de 24V, a qual precisaremos adeq
 | Micro relé para válvula esférica (V102)  | S115    | I5                  | XMA1.18    |
 | Micro relé para válvula esférica (V102)  | S116    | I6                  | XMA1.19    |
 | N/A                                      | N/A     | I7                  | XMA1.20    |
-
-### Tabela 4 - Saídas Digitais XMA1
-
-| Descrição                            | Símbolo | Atribuição de pinos | Referência |
-|--------------------------------------|---------|---------------------|------------|
-| Acionamento válvula esférica          | M102    | O0                  | XMA1.1     |
-| Aquecedor                             | E104    | O1                  | XMA1.2     |
-| Relé controle analógico da bomba      | K1      | O2                  | XMA1.3     |
-| Relé controle binário da bomba        | M1      | O3                  | XMA1.4     |
-| Acionamento válvula proporcional      | M106    | O4                  | XMA1.5     |
-| N/A                                  | N/A     | O5                  | XMA1.6     |
-| N/A                                  | N/A     | O6                  | XMA1.7     |
-| N/A                                  | N/A     | O7                  | XMA1.8     |
-
----
+| N/A                                      | 24V B   | 24V                 | XMA1.21    |
+| N/A                                      | 24V B   | 24V                 | XMA1.22    |
+| N/A                                      | GND B   | GND                 | XMA1.23    |
+| N/A                                      | GND B   | GND                 | XMA1.24    |
 
 ### Terminal I/O Analógico
 
@@ -149,23 +150,26 @@ Os componentes analógicos da bancada também estão conectados a um terminal I/
 
 Este terminal utiliza um conector D-Sub 15 pinos para comunicação com a interface, o qual utilizaremos em nosso benefício para conexão de nossa interface. Para isso, mapeamos os pinos do terminal e suas funções de controle dos componentes da bancada, conforme apresentado abaixo:
 
-### Tabela 5 - Entradas Analógicas X2
+### Tabela 4 - Entradas Analógicas X2
 
-| Descrição                       | Símbolo | Atribuição de pinos | Referência |
-|----------------------------------|---------|---------------------|------------|
-| Sensor de nível ultrassônico     | LIC B101| UE1                 | X2.8       |
-| Sensor de vazão                  | FIC B102| UE2                 | X2.7       |
-| Sensor de pressão                | PIC B103| UE3                 | X2.15      |
-| Sensor de temperatura            | TIC B104| UE4                 | X2.14      |
-
-### Tabela 6 - Saídas Analógicas X2
-
-| Descrição                                  | Símbolo | Atribuição de pinos | Referência |
-|--------------------------------------------|---------|---------------------|------------|
-| Bomba centrífuga                           | P101    | UA1                 | X2.1       |
+| Descrição                                   | Símbolo | Atribuição de pinos | Referência |
+|---------------------------------------------|---------|---------------------|------------|
+| Bomba centrífuga                            | P101    | UA1                 | X2.1       |
 | Válvula proporcional para controle de vazão | V106    | UA2                 | X2.2       |
+| N/A                                         | N/A     | GND A               | X2.3       |
+| N/A                                         | N/A     | IE2                 | X2.4       |
+| N/A                                         | N/A     | IE1                 | X2.5       |
+| N/A                                         | N/A     | GND B               | X2.6       |
+| Sensor de vazão                             | FIC B102| UE2                 | X2.7       |
+| Sensor de nível ultrassônico                | LIC B101| UE1                 | X2.8       |
+| N/A                                         | N/A     | IA2                 | X2.9       |
+| N/A                                         | N/A     | IA1                 | X2.10      |
+| N/A                                         | N/A     | N.C.                | X2.11      |
+| N/A                                         | N/A     | IE4                 | X2.12      |
+| N/A                                         | N/A     | IE3                 | X2.13      |
+| Sensor de temperatura                       | TIC B104| UE4                 | X2.14      |
+| Sensor de pressão                           | PIC B103| UE3                 | X2.15      |
 
-O restante dos pinos são utilizados para alimentação e referência ou não são utilizados.
 
 ## Fluxograma do Sistema
 
