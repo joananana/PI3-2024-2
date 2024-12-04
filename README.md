@@ -246,3 +246,69 @@ Visamos modelar circuitos simples e eficientes do ponto de vista energético par
 Para as saídas analógicas utilizamos amplificadores operacionais na topologia não-inversora para conversão do sinal de 3.3V para 10V. Para as entradas analógicas utilizamos um divisor resistivo juntamente com um circuito para proteção da ESP32 utilizando diodos e um amplificador operacional como seguidor de tensão.
 
 ![Circuito Analógico](imagens/Analog_IO.JPG)
+
+## Etapa 3
+
+### Esquemático do Circuito de Interface ESP32/Bancada
+Após modelar e testar os circuitos, concluímos o primeiro protótipo de esquemático para nosso projeto, como segue abaixo:
+
+![Esquematico](imagens/Esquematico.png)
+
+Para a parte de alimentação vamos utilizar um módulo pronto do LM2596.
+
+![Esquematico](imagens/Esquematico_Alimentacao.png)
+
+Para a ligação elétrica dos sensorres e atuadores com a nossa placa, utilizaremos os chicotes que já estão prontos na bancada e colocaremos os conectores para esses chicotes na placa.
+
+![Esquematico](imagens/Esquematico_conectores.png)
+
+Lista das entradas e saídas para organização do esquemático.
+
+![Esquematico](imagens/Esquematico_in_out.png)
+
+Circuito de entradas digitais.
+![Esquematico](imagens/Esquematico_in_digital.png)
+
+Circuito de saídas digitais.
+![Esquematico](imagens/Esquematico_out_digital.png)
+
+Circuito de entradas analógicas, nesse circuito, utilizamos dois diodos grampeadores para o caso do AmpOp mandar 24V para a saída e queimar o pino do microcontrolador.
+![Esquematico](imagens/Esquematico_in_analogic.png)
+
+Circuito de saídas analógicas.
+
+
+![Esquematico](imagens/Esquematico_out_analogic.png)
+
+Circuito de ligação da ESP32.
+
+
+![Esquematico](imagens/Esquematico_ESP32.png)
+
+Os componentes utilizados estão listados na tabela abaixo:
+
+| #   | Designator                                          | Description                                | Quantity | Footprint                      | Manufacturer Part Number    |
+|-----|-----------------------------------------------------|--------------------------------------------|----------|--------------------------------|-----------------------------|
+| 1   | C13, C14                                           | CAP CER 100nF 50V X7R 0805                | 2        | 0805C                         |                             |
+| 2   | C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12  | CAP CER 10nF 50V X7R 0805                 | 12       | 0805C                         |                             |
+| 3   | R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R16, R17, R18, R19, R20, R21, R22, R23, R24 | RES 1K OHM 5% 1/8W 0805   | 24       | 0805R |          |
+| 4   | J1, J2                                             | BR8 Metaltex connector, 1x2, male, 180°   | 2        | BR8_1X2_M                     |                             |
+| 5   | IC3, IC4, IC5, IC6, IC7, IC8, IC9, IC10, IC11, IC12, IC13, IC14 | Integrated Circuit           | 12       | DIP762W60P254L458H450Q4N      | PC817C                      |
+| 6   | IC1, IC2                                           | Integrated Circuit                        | 2        | DIP794W56P254L1905H533Q14N    | LM324N/NOPB                 |
+| 7   | P3                                                 | Connector DB15 female, 180º, 2 Lines, 7e8 Columns, 26 Pins | 1        | ds1033       |                             |
+| 8   | P2                                                 | Connector DS1078 Female, 180°, 2 Lines, 12 Columns, 24 Pins | 1        | ds1039      |                             |
+| 9   | U1                                                 | IC MCU 32BIT ESP32 DEVKIT V01             | 1        | ESP32-DEVKIT-V1               | ESP-32-DEVKIT-V1            |
+| 10  | P1                                                 | Header, Male, 180°, 1 Line, 3 Columns, 3 Pins | 1    | Header_1x3_M_2.54             |                             |
+| 11  | M1                                                 | LM2596 4 Pins                             | 1        | MOD_LM2596                    |                             |
+| 12  | R26, R27, R35, R36                                 | RES 100 OHM 5% 1/8                        | 4        | RESISTOR                      |                             |
+| 13  | R25, R40                                           | RES 10k OHM 5% 1/8W                       | 2        | RESISTOR                      |                             |
+| 14  | R33, R34, R38, R39                                 | RES 33K OHM 5% 1/8W                       | 4        | RESISTOR                      |                             |
+| 15  | R28, R37                                           | RES 4K7 OHM 5% 1/8W                       | 2        | RESISTOR                      |                             |
+| 16  | R29, R30, R31, R32                                 | RES 68K OHM 5% 1/8W                       | 4        | RESISTOR                      |                             |
+| 17  | D1, D2, D3, D4                                     | Schottky Diode                            | 4        | SOT95P230X110-3N              | BAT54S,215                  |
+
+A PCB foi roteada pelo Bottom Layer, os componentes PTH foram posicionados do lado do Top Layer, a placa ficou com aproximadamente 20 x 10 cm. O resultado final da primeira versão da placa é mostrado a seguir:
+
+![Top Layer](imagens/PCB_Top.png)
+
+![Bottom Layer](imagens/PCB_Bot.png)
