@@ -560,8 +560,8 @@ void app_main(void)
 	
 	spiffs_init();			// Inicializa o sistema de arquivos
 	nvs_flash_init();       // Inicializa a memória não volátil
-    wifi_init();            // Inicializa o Wi-Fi
-    start_webserver();
+	wifi_init();            // Inicializa o Wi-Fi
+	start_webserver();
 	gpio_init();
 	dac_init();
 	adc_init();
