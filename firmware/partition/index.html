@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"   content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Controle</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="buttons">
+        <!-- Botão para enviar comandos -->
+        <button onclick='sendCommand1()'>Enviar Comando 1</button>
+        <button onclick='sendCommand2()'>Enviar Comando 2</button>
+        <button onclick='sendCommand3()'>Enviar Comando 3</button>
+        <button onclick='sendCommand4()'>Enviar Comando 4</button>
+        <button onclick='sendCommand5()'>Enviar Comando 5</button>
+    </div>
+
+    <div class="control">
+
+        <label for="dac1">DAC 1:</label>
+        <input type="range" id="dac1-slider" min="0" max="255" value="0">
+        <input type="number" id="dac1-input" min="0" max="255" value="0">
+
+    </div>
+
+    <div class="control">
+        
+        <label for="dac2">DAC 2:</label>
+        <input type="range" id="dac2-slider" min="0" max="255" value="0">
+        <input type="number" id="dac2-input" min="0" max="255" value="0">
+    
+    </div>
+
+    <div class="sensors">
+        <h2>Dados dos Sensores</h2>
+        <!-- Elementos para mostrar dados dos sensores -->
+        <p id='sensorDig1'>Sensor Digital 1: Aguardando dados...</p>
+        <p id='sensorDig2'>Sensor Digital 2: Aguardando dados...</p> 
+        <p id='sensorDig3'>Sensor Digital 3: Aguardando dados...</p>
+        <p id='sensorDig4'>Sensor Digital 4: Aguardando dados...</p> 
+        <p id='sensorDig5'>Sensor Digital 5: Aguardando dados...</p>
+        <p id='sensorDig6'>Sensor Digital 6: Aguardando dados...</p> 
+        <p id='sensorDig7'>Sensor Digital 7: Aguardando dados...</p>
+        <p id='sensorAnalog1'>Sensor Analógico 1: Aguardando dados...</p> 
+        <p id='sensorAnalog2'>Sensor Analógico 2: Aguardando dados...</p> 
+        <p id='sensorAnalog3'>Sensor Analógico 3: Aguardando dados...</p> 
+        <p id='sensorAnalog4'>Sensor Analógico 4: Aguardando dados...</p> 
+
+    </div>
+</div>
+</body>
+</html>
