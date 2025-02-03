@@ -68,19 +68,37 @@ Após entendermos o funcionamento de cada componente, precisamos mapear a comuni
 
 ### Sensor de nível ultrassônico - B101
 
-![Sensor B101](imagens/B101.JPG)
+
+<div align ="center">
+<img src="imagens/B101.JPG"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 O sinal de corrente analógico (4 ... 20 mA) do sensor ultrassônico(1) está conectado como um sinal padrão ao terminal analógico X2 (IE1) no canal 0. O sinal de corrente também está conectado ao transformador de medição A1, que converte o sinal de corrente analógico em um sinal de tensão padrão (0 ... 10 V). O sinal de tensão padrão também está conectado ao terminal analógico X2 (UE1).
 
 ### Sensores capacitivo de proximidade - B113 / B114
 
-![Sensor B113_B114](imagens/B113_B114.JPG)
+
+<div align ="center">
+<img src="imagens/B113_B114.JPG"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 Dois interruptores de proximidade capacitivos, B113 (1) e B114 (2), estão localizados na lateral do tanque inferior B101 e montados em uma placa de perfil. Os interruptores de proximidade podem ser ajustados mecanicamente. A distância de detecção através da parede do tanque pode ser ajustada com um parafuso. Os sinais de entrada binários de 24 V são conectados ao terminal de E/S XMA1.
 
 ### Interruptores de nível tipo boia - S111 / S112 / S117
 
-![Sensor S112](imagens/S112.JPG)
+
+<div align ="center">
+<img src="imagens/S112.JPG"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 - **S111**: O transbordamento no tanque B101 é monitorado com o interruptor de boia. Se o nível no tanque exceder o nível máximo, o cilindro de boia transparente é empurrado para cima, ativando um contato reed. Os sinais de entrada binários de 24 V (normalmente abertos) são conectados ao terminal de E/S XMA1.
 - **S112**: Monitora o nível mínimo no tanque superior B102. Os sinais de entrada binários de 24 V (normalmente fechados) são conectados ao terminal de E/S XMA1.
@@ -88,19 +106,37 @@ Dois interruptores de proximidade capacitivos, B113 (1) e B114 (2), estão local
 
 ### Sensor de vazão - B102
 
-![Sensor B102](imagens/B102.JPG)
+
+<div align ="center">
+<img src="imagens/B102.JPG"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 Um sinal de onda quadrada constante do sensor de vazão está conectado a uma entrada binária no terminal de E/S XMA1 (I0). O nível do sinal depende da tensão de alimentação aplicada (8...24 V). O sinal de frequência também está conectado ao transformador de medição A2, que converte o sinal em uma tensão padrão de 0 a 10 V.
 
 ### Sensor de pressão - B103
 
-![Sensor B103](imagens/B103.JPG)
+
+<div align ="center">
+<img src="imagens/B103.JPG"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 O sensor de pressão(2) piezoresistivo envia um sinal analógico de 0 a 10V de acordo com a pressão no tanque B103 entre 0 a 400mbar.
 
 ### Sensor de temperatura - B104
 
-![Sensor B104](imagens/B104.JPG)
+
+<div align ="center">
+<img src="imagens/B104.JPG"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 A resistência do sensor de temperatura(2) está conectada ao transformador de medição A3, que converte a resistência em um sinal de tensão padrão (0 a 10 V), conectado ao terminal analógico X2 (UE4). O aquecimento é controlado por um relé interno, ativado por uma saída digital (O1 no XMA1).
 
@@ -117,25 +153,49 @@ A resistência do sensor de temperatura(2) está conectada ao transformador de m
 
 ### Bomba centrífuga - P101
 
-![Atuador P101](imagens/P101.JPG)
+
+<div align ="center">
+<img src="imagens/P101.JPG"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 A bomba(1) é acionada pelo controlador de motor A4 e pelo relé K1. Com uma saída digital (O2 no XMA1), é possível alternar entre controle binário e controle analógico (0 a 24 V). No controle binário, a bomba é ligada/desligada com uma saída adicional (O3 no XMA1). No controle analógico, a tensão de acionamento define a velocidade da bomba (0 a 10 V).
 
 ### Válvula proporcional para controle de vazão - V106
 
-![Atuador V106](imagens/V106.JPG)
+
+<div align ="center">
+<img src="imagens/V106.JPG"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 A eletrônica de controle da válvula é ativada com uma saída binária (O4 no XMA1). Um sinal analógico do canal 1 (UA2 no X2) aciona a válvula com um sinal padrão de 0 a 10 V.
 
 ### Válvula esférica - V102
 
-![Atuador V102](imagens/V102.JPG)
+
+<div align ="center">
+<img src="imagens/V102.JPG"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 O acessório de detecção de posição final é composto por dois micro relés elétricos. Os sinais binários de 24 VDC (S115 e S116) estão conectados como entradas no terminal de E/S XMA1.
 
 ### Aquecedor - E104
 
-![Atuador E104](imagens/E104.JPG)
+
+<div align ="center">
+<img src="imagens/E104.JPG"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 O aquecimento é controlado internamente pela bancada, ativado por uma saída binária (O1 no XMA1). O controle do aquecimento pode ser binário ou contínuo (modulação por largura de pulso - PWM).
 
@@ -147,7 +207,13 @@ O aquecimento é controlado internamente pela bancada, ativado por uma saída bi
 
 A bancada utiliza um terminal I/O digital, identificado como XMA1, para comunicação entre os sensores de saída binária com sua interface. 
 
-![Terminal XMA1](imagens/XMA1.JPG)
+
+<div align ="center">
+<img src="imagens/XMA1.JPG"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 Este terminal I/O possui uma conexão de 24 pinos padrão IEEE-488 a qual podemos utilizar em nosso benefício para comunicação entre nosso microcontrolador e a bancada.
 
@@ -190,7 +256,12 @@ O terminal I/O digital trabalha com uma tensão de 24V, a qual precisaremos adeq
 
 Os componentes analógicos da bancada também estão conectados a um terminal I/O, identificado como X2, para facilitar a integração e comunicação. Todos os sinais são convertidos para níveis de tensão entre 0 e 10V, os quais teremos que adequar para leitura nos conversores analógico-digitais de nosso microcontrolador.
 
-![Terminal X2](imagens/X2.JPG)
+
+<div align ="center">
+<img src="imagens/X2.JPG"
+     width="60%"
+     style="padding: 10px">
+</div>
 
 Este terminal utiliza um conector D-Sub 15 pinos para comunicação com a interface, o qual utilizaremos em nosso benefício para conexão de nossa interface. Para isso, mapeamos os pinos do terminal e suas funções de controle dos componentes da bancada, conforme apresentado abaixo:
 
@@ -220,7 +291,12 @@ Este terminal utiliza um conector D-Sub 15 pinos para comunicação com a interf
 
 O fluxograma apresentado abaixo descreve o processo de funcionamento da interface microcontrolada para a bancada MPS Festo com comunicação via Wi-Fi. Esse sistema visa gerenciar a comunicação e o controle de dispositivos da bancada de forma eficiente e prática.
 
-![Fluxograma](imagens/Fluxograma%20Firmware.drawio.png)
+
+<div align ="center">
+<img src="imagens/Fluxograma%20Firmware.drawio.png"
+     width="60%"
+     style="padding: 10px">
+</div>
 
 **Início**: O sistema é inicializado. Nesta fase, o ESP32 é ligado e começa a executar o código que controla o processo.
 
@@ -235,80 +311,142 @@ Caso não haja uma requisição de dados, o sistema retorna para o estado de esp
 
 **Retorna Dado**: Se uma requisição é identificada, o microcontrolador processa as informações solicitadas (como leituras de sensores ou estados dos atuadores) e as envia de volta ao dispositivo solicitante via servidor web, permitindo o monitoramento remoto em tempo real.
 
-Esse fluxograma representa um sistema eficiente para o controle remoto da bancada MPS Festo usando um microcontrolador com conectividade Wi-Fi. Esse processo garante que o usuário consiga acessar e controlar a bancada remotamente, monitorando e ajustando os parâmetros em tempo real por meio de uma interface web. A interface microcontrolada desenvolvida com esse fluxograma proporciona maior flexibilidade e autonomia para o gerenciamento dos processos na bancada, além de melhorar a integração com sistemas de controle personalizados.
+Esse fluxograma representa um sistema para o controle remoto da bancada MPS Festo usando um microcontrolador com conectividade Wi-Fi. O processo garante que o usuário consiga acessar e controlar a bancada remotamente, monitorando e ajustando os parâmetros em tempo real por meio de uma interface web. A interface microcontrolada desenvolvida com esse fluxograma proporciona uma flexibilidade e autonomia para o gerenciamento dos processos na bancada, além de melhorar a integração com sistemas de controle personalizados.
 
 ### Circuito de Interface ESP32 / Bancada
 
 Visamos modelar circuitos simples e eficientes do ponto de vista energético para a comunicação. Para adequar os níveis de tensão de 24V para comunicação digital, utilizamos circuitos de chaveamento com optoacopladores: 
 
-![Circuito Digital](imagens/Digital_IO.JPG)
+<div align ="center">
+<img src="imagens/Digital_IO.JPG"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 Para as saídas analógicas utilizamos amplificadores operacionais na topologia não-inversora para conversão do sinal de 3.3V para 10V. Para as entradas analógicas utilizamos um divisor resistivo juntamente com um circuito para proteção da ESP32 utilizando diodos e um amplificador operacional como seguidor de tensão.
 
-![Circuito Analógico](imagens/Analog_IO.JPG)
+
+<div align ="center">
+<img src="imagens/Analog_IO.JPG"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 ## Etapa 3
 
 ### Esquemático do Circuito de Interface ESP32/Bancada
 Após modelar e testar os circuitos, concluímos o primeiro protótipo de esquemático para nosso projeto, como segue abaixo:
 
-![Esquematico](imagens/Esquematico.png)
+<div align ="center">
+<img src="imagens/Esquematico.png"
+     width="60%"
+     style="padding: 10px">
+</div>
 
 Para a parte de alimentação vamos utilizar um módulo pronto do LM2596.
 
-![Esquematico](imagens/Esquematico_Alimentacao.png)
+
+<div align ="center">
+<img src="imagens/Esquematico_Alimentacao.png"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 Para a ligação elétrica dos sensorres e atuadores com a nossa placa, utilizaremos os chicotes que já estão prontos na bancada e colocaremos os conectores para esses chicotes na placa.
 
-![Esquematico](imagens/Esquematico_conectores.png)
+
+<div align ="center">
+<img src="imagens/Esquematico_conectores.png"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 Lista das entradas e saídas para organização do esquemático.
 
-![Esquematico](imagens/Esquematico_in_out.png)
+
+<div align ="center">
+<img src="imagens/Esquematico_in_out.png"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 Circuito de entradas digitais.
-![Esquematico](imagens/Esquematico_in_digital.png)
+
+<div align ="center">
+<img src="imagens/Esquematico_in_digital.png"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 Circuito de saídas digitais.
-![Esquematico](imagens/Esquematico_out_digital.png)
+
+<div align ="center">
+<img src="imagens/Esquematico_out_digital.png"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 Circuito de entradas analógicas, nesse circuito, utilizamos dois diodos grampeadores para o caso do AmpOp mandar 24V para a saída e queimar o pino do microcontrolador.
-![Esquematico](imagens/Esquematico_in_analogic.png)
+
+<div align ="center">
+<img src="imagens/Esquematico_in_analogic.png"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 Circuito de saídas analógicas.
 
 
-![Esquematico](imagens/Esquematico_out_analogic.png)
+<div align ="center">
+<img src="imagens/Esquematico_out_analogic.png"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 
 Circuito de ligação da ESP32.
 
+<div align ="center">
+<img src="imagens/Esquematico_ESP32.png"
+     width="60%"
+     style="padding: 10px">
+</div>
 
-![Esquematico](imagens/Esquematico_ESP32.png)
 
 Os componentes utilizados estão listados na tabela abaixo:
 
-| #   | Designator                                          | Description                                | Quantity | Footprint                      | Manufacturer Part Number    |
-|-----|-----------------------------------------------------|--------------------------------------------|----------|--------------------------------|-----------------------------|
-| 1   | C13, C14                                           | CAP CER 100nF 50V X7R 0805                | 2        | 0805C                         |                             |
-| 2   | C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12  | CAP CER 10nF 50V X7R 0805                 | 12       | 0805C                         |                             |
-| 3   | R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12, R13, R14, R15, R16, R17, R18, R19, R20, R21, R22, R23, R24 | RES 1K OHM 5% 1/8W 0805   | 24       | 0805R |          |
-| 4   | J1, J2                                             | BR8 Metaltex connector, 1x2, male, 180°   | 2        | BR8_1X2_M                     |                             |
-| 5   | IC3, IC4, IC5, IC6, IC7, IC8, IC9, IC10, IC11, IC12, IC13, IC14 | Integrated Circuit           | 12       | DIP762W60P254L458H450Q4N      | PC817C                      |
-| 6   | IC1, IC2                                           | Integrated Circuit                        | 2        | DIP794W56P254L1905H533Q14N    | LM324N/NOPB                 |
-| 7   | P3                                                 | Connector DB15 female, 180º, 2 Lines, 7e8 Columns, 26 Pins | 1        | ds1033       |                             |
-| 8   | P2                                                 | Connector DS1078 Female, 180°, 2 Lines, 12 Columns, 24 Pins | 1        | ds1039      |                             |
-| 9   | U1                                                 | IC MCU 32BIT ESP32 DEVKIT V01             | 1        | ESP32-DEVKIT-V1               | ESP-32-DEVKIT-V1            |
-| 10  | P1                                                 | Header, Male, 180°, 1 Line, 3 Columns, 3 Pins | 1    | Header_1x3_M_2.54             |                             |
-| 11  | M1                                                 | LM2596 4 Pins                             | 1        | MOD_LM2596                    |                             |
-| 12  | R26, R27, R35, R36                                 | RES 100 OHM 5% 1/8                        | 4        | RESISTOR                      |                             |
-| 13  | R25, R40                                           | RES 10k OHM 5% 1/8W                       | 2        | RESISTOR                      |                             |
-| 14  | R33, R34, R38, R39                                 | RES 33K OHM 5% 1/8W                       | 4        | RESISTOR                      |                             |
-| 15  | R28, R37                                           | RES 4K7 OHM 5% 1/8W                       | 2        | RESISTOR                      |                             |
-| 16  | R29, R30, R31, R32                                 | RES 68K OHM 5% 1/8W                       | 4        | RESISTOR                      |                             |
-| 17  | D1, D2, D3, D4                                     | Schottky Diode                            | 4        | SOT95P230X110-3N              | BAT54S,215                  |
+| # | Designator                                      | Description                                       | Quantity | Footprint                          | Manufacturer_Part_Number  |
+|----|------------------------------------------------|---------------------------------------------------|----------|------------------------------------|---------------------------|
+| 1  | C13, C14                                      | CAP CER 100nF 50V X7R 0805                        | 2        | 0805C                              |                           |
+| 2  | C1, C2, C3, C4, C5, C6, C7, C8, C9, C10, C11, C12 | CAP CER 10nF 50V X7R 0805                        | 12       | 0805C                              |                           |
+| 3  | R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12 | RES 10K OHM 5% 1/8W 0805                         | 12       | 0805R                              |                           |
+| 4  | J1                                            | BR8 Metaltex connector, 1x2, male, 180°          | 1        | BR8_1X2_M                          |                           |
+| 5  | IC3, IC4, IC5, IC6, IC7, IC8, IC9, IC10, IC11, IC12, IC13, IC14 | Integrated Circuit                      | 12       | DIP762W60P254L458H450Q4N           | PC817C                    |
+| 6  | IC1, IC2                                      | Integrated Circuit                               | 2        | DIP794W56P254L1905H533Q14N         | LM324N/NOPB               |
+| 7  | P3                                            | Connector DB15 female, 180º, 2 Lines, 7e8 Columns, 26 Pins | 1 | ds1033                             |                           |
+| 8  | P2                                            | Connector DS1078 Female, 180°, 2 Lines, 12 Columns, 24 Pins | 1 | ds1039                             |                           |
+| 9  | U1                                            | IC MCU 32BIT ESP32 DEVKIT V01                   | 1        | ESP32-DEVKIT-V1                    | ESP-32-DEVKIT-V1          |
+| 10 | M1                                            | LM2596 4 Pins                                   | 1        | MOD_LM2596                         |                           |
+| 11 | R26, R27, R35, R36                            | RES 100 OHM 5% 1/8                              | 4        | RESISTOR                           |                           |
+| 12 | R25, R40                                      | RES 10k OHM 5% 1/8W                             | 2        | RESISTOR                           |                           |
+| 13 | R33, R34, R38, R39                            | RES 33K OHM 5% 1/8W                             | 4        | RESISTOR                           |                           |
+| 14 | R28, R37                                      | RES 4K7 OHM 5% 1/8W                             | 2        | RESISTOR                           |                           |
+| 15 | R29, R30, R31, R32                            | RES 68K OHM 5% 1/8W                             | 4        | RESISTOR                           |                           |
+| 16 | D1, D2, D3, D4                                | Schottky Diode                                  | 4        | SOT95P230X110-3N                   | BAT54S,215                |
 
-A PCB foi roteada pelo Bottom Layer, os componentes PTH foram posicionados do lado do Top Layer, a placa ficou com aproximadamente 20 x 10 cm. O resultado final da primeira versão da placa é mostrado a seguir:
+
+A PCB foi roteada pelo Bottom Layer, os componentes PTH foram posicionados do lado do Top Layer, a placa ficou com aproximadamente 21 x 10 cm. O resultado final do roteamento da placa é mostrado a seguir:
 
 ![Top Layer](imagens/PCB_Top.png)
 
 ![Bottom Layer](imagens/PCB_Bot.png)
+
+## Etapa 4
