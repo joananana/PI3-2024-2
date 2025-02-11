@@ -450,3 +450,29 @@ A PCB foi roteada pelo Bottom Layer, os componentes PTH foram posicionados do la
 ![Bottom Layer](imagens/PCB_Bot.png)
 
 ## Etapa 4
+
+Antes de fabricar a PCB, realizamos testes em bancada utilizando uma placa de prototipagem ilhada. Nela, simulamos cada tipo de circuito digital e analógico, tanto de entrada quanto de saída, para validar o funcionamento do circuito eletrônico proposto.
+
+<div align ="center">
+<img src="imagens/Placa_teste.jpg"
+     width="60%"
+     style="padding: 10px">
+</div>
+
+Com esse teste, verificamos que o resistor de 10 kΩ presente na entrada do optoacoplador no circuito digital de acionamento (como mostrado na imagem abaixo) não fornecia corrente suficiente para polarizar o transistor na saída do optoacoplador, o que limitava a tensão de saída. Para a produção da placa, substituímos esse resistor por um de 1 kΩ
+
+<div align ="center">
+<img src="imagens/Esquematico_out_digital.png"
+     width="60%"
+     style="padding: 10px">
+</div>
+
+A placa foi desenvolvida no laboratório de protótipos(LPDE) do IFSC pelo método de transferência por toner. O circuito desenvolvido no Altium foi impresso em papel glossy com uma impressora a laser. A placa de fenolite foi cortada no tamanho desejado e sua superfície de cobre foi limpa com lixa fina e álcool isopropílico. Em seguida, o papel impresso foi posicionado sobre a placa e submetido a calor e pressão por meio de um ferro de passar roupa, garantindo a transferência do toner para o cobre. Após o resfriamento, a placa foi imersa em água morna para remoção do papel, revelando as trilhas de toner aderidas. O próximo passo foi utilizar percloreto de ferro para corroer as áreas de cobre não protegidas. Concluída a corrosão, o toner foi removido com álcool isopropílico, deixando apenas as trilhas condutoras. Para finalizar, foram realizados os furos para conexão dos componentes e aplicado um verniz protetor. O processo resultou em uma PCB funcional, com algumas trilhas apresentando falhas devido à pressão e temperatura da transferência, indicando a necessidade de ajustes para otimização da qualidade final.
+
+<div align ="center">
+<img src="imagens/Placa_Finalizada.png"
+     width="60%"
+     style="padding: 10px">
+</div>
+
+
