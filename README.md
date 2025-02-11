@@ -475,4 +475,19 @@ A placa foi desenvolvida no laboratório de protótipos(LPDE) do IFSC pelo méto
      style="padding: 10px">
 </div>
 
+A placa foi conectada à bancada (conforme ilustrado na figura abaixo) para verificar seu funcionamento e realizar os testes necessários para validação.
 
+<div align ="center">
+<img src="imagens/Placa_Conectores.jpg"
+     width="60%"
+     style="padding: 10px">
+</div>
+
+Para integrar a placa desenvolvida à bancada, optamos por projetar um suporte em vez de um gabinete, visando facilitar o acesso aos conectores e componentes. Essa escolha permite maior flexibilidade para testes e medições com multímetro, alinhando-se à natureza didática da bancada.
+A placa fixada junto a bancada é mostrada na figura abaixo.
+
+<div align ="center">
+<img src="imagens/Placa_suporte_bancada.jpg"
+     width="60%"
+     style="padding: 10px">
+</div>
