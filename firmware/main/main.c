@@ -514,7 +514,7 @@ void gpio_init(void){
 	gpio_config_t input_config = {
 		.pin_bit_mask = (1<<B102) | (1<<S111) | (1<<S112) | (1<<B113) | (1<<B114) | (1<<S115) | (1<<S116), 
 		.mode = GPIO_MODE_INPUT,
-		.pull_up_en = GPIO_PULLUP_ENABLE,
+		.pull_up_en = GPIO_PULLUP_DISABLE,
 		.pull_down_en = GPIO_PULLDOWN_DISABLE,
 		.intr_type = GPIO_INTR_DISABLE
 	};

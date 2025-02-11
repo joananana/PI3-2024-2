@@ -2,58 +2,58 @@
 function fetchSensorDig1() {
     fetch('/data?tipo=sensorDig1')
     .then(response => response.text())
-    .then(data => document.getElementById('sensorDig1').innerText = 'Sensor Digital 1: ' + data);}
+    .then(data => document.getElementById('sensorDig1').innerText = 'Sensor de Vazão B102: ' + data);}
 
 function fetchSensorDig2() {
     fetch('/data?tipo=sensorDig2')
     .then(response => response.text())
-    .then(data => document.getElementById('sensorDig2').innerText = 'Sensor Digital 2: ' + data);}
+    .then(data => document.getElementById('sensorDig2').innerText = 'Bóia de Nível S111: ' + data);}
     
 function fetchSensorDig3() {
     fetch('/data?tipo=sensorDig3')
     .then(response => response.text())
-    .then(data => document.getElementById('sensorDig3').innerText = 'Sensor Digital 3: ' + data);}
+    .then(data => document.getElementById('sensorDig3').innerText = 'Bóia de Nível S112: ' + data);}
 
 function fetchSensorDig4() {
     fetch('/data?tipo=sensorDig4')
     .then(response => response.text())
-    .then(data => document.getElementById('sensorDig4').innerText = 'Sensor Digital 4: ' + data);}
+    .then(data => document.getElementById('sensorDig4').innerText = 'Sensor Capacitivo B113: ' + data);}
 
 function fetchSensorDig5() {
     fetch('/data?tipo=sensorDig5')
     .then(response => response.text())
-    .then(data => document.getElementById('sensorDig5').innerText = 'Sensor Digital 5: ' + data);}
+    .then(data => document.getElementById('sensorDig5').innerText = 'Sensor Capacitivo B114: ' + data);}
 
 function fetchSensorDig6() {
     fetch('/data?tipo=sensorDig6')
     .then(response => response.text())
-    .then(data => document.getElementById('sensorDig6').innerText = 'Sensor Digital 6: ' + data);}
+    .then(data => document.getElementById('sensorDig6').innerText = 'Micro rele S115: ' + data);}
 
 function fetchSensorDig7() {
     fetch('/data?tipo=sensorDig7')
     .then(response => response.text())
-    .then(data => document.getElementById('sensorDig7').innerText = 'Sensor Digital 7: ' + data);}
+    .then(data => document.getElementById('sensorDig7').innerText = 'Micro rele S116: ' + data);}
 
 // Função de leitura dos sensores analógicos
 function fetchSensorAnalog1() {
     fetch('/data?tipo=sensorAnalog1')
     .then(response => response.text())
-    .then(data => document.getElementById('sensorAnalog1').innerText = 'Sensor Analogico 1: ' + data);}
+    .then(data => document.getElementById('sensorAnalog1').innerText = 'Sensor de Nível Ultrassônico B101: ' + data);}
 
 function fetchSensorAnalog2() {
     fetch('/data?tipo=sensorAnalog2')
     .then(response => response.text())
-    .then(data => document.getElementById('sensorAnalog2').innerText = 'Sensor Analogico 2: ' + data);}
+    .then(data => document.getElementById('sensorAnalog2').innerText = 'Sensor de Vazão B102: ' + data);}
 
 function fetchSensorAnalog3() {
     fetch('/data?tipo=sensorAnalog3')
     .then(response => response.text())
-    .then(data => document.getElementById('sensorAnalog3').innerText = 'Sensor Analogico 3: ' + data);}
+    .then(data => document.getElementById('sensorAnalog3').innerText = 'Sensor de Pressão B103: ' + data);}
 
 function fetchSensorAnalog4() {
     fetch('/data?tipo=sensorAnalog4')
     .then(response => response.text())
-    .then(data => document.getElementById('sensorAnalog4').innerText = 'Sensor Analogico 4: ' + data);}
+    .then(data => document.getElementById('sensorAnalog4').innerText = 'Sensor de Temperatura B104: ' + data);}
 
 // Função para cada comando dos botões
 function sendCommand1() {
@@ -126,5 +126,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Configurar DAC 1 e DAC 2
     setupDACControl("dac1-slider", "dac1-input", 1);
-    setupDACControl("dac2-slider", "dac2-input", 1);
+    setupDACControl("dac2-slider", "dac2-input", 2);
 });
