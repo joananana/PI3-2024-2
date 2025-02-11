@@ -483,7 +483,15 @@ A placa foi conectada à bancada (conforme ilustrado na figura abaixo) para veri
      style="padding: 10px">
 </div>
 
-Para integrar a placa desenvolvida à bancada, optamos por projetar um suporte em vez de um gabinete, visando facilitar o acesso aos conectores e componentes. Essa escolha permite maior flexibilidade para testes e medições com multímetro, alinhando-se à natureza didática da bancada.
+Para integrar a placa desenvolvida à bancada, optamos por projetar um suporte 3D em vez de um gabinete, visando facilitar o acesso aos conectores e componentes. Essa escolha permite maior flexibilidade para testes e medições com multímetro, alinhando-se à natureza didática da bancada.
+O suporte foi projetado com 22 cm de largura e 17,5 cm de altura, para ser encaixado entre as esteiras presentes na estrutura da bancada.
+
+<div align ="center">
+<img src="imagens/Suporte_3D.jpg"
+     width="60%"
+     style="padding: 10px">
+</div>
+
 A placa fixada junto a bancada é mostrada na figura abaixo.
 
 <div align ="center">
