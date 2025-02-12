@@ -499,3 +499,11 @@ A placa fixada junto a bancada é mostrada na figura abaixo.
      width="60%"
      style="padding: 10px">
 </div>
+
+### Descrição geral do funcionamento
+
+### Conclusão dos testes realizados
+
+Mesmo após substituir o resistor na entrada do optoacoplador no circuito digital de acionamento por um de 1 kΩ, a corrente ainda não foi suficiente para polarizar o transistor. Para corrigir essa limitação, realizamos uma nova troca, reduzindo os resistores para 330 Ω, o que permitiu o acionamento da bomba de água (M1).
+
+Para uma análise mais detalhada, testamos o circuito digital aplicando uma tensão direta de 24V e, utilizando um multímetro no modo amperímetro, medimos a corrente necessária para o acionamento de cada componente. Os valores obtidos foram: M106 requer 18 mA, E104 requer 9,6 mA, M102 requer 200 mA, M1 requer 10,8 mA e K1 requer 26 mA. Com base nesses resultados, concluímos que o acionamento da válvula esférica (M102) ultrapassa o limite de corrente suportado pelo optoacoplador, que, conforme o datasheet, é de 50 mA Dessa forma, não é possível acionar a válvula com a configuração atual do circuito eletrônico, sendo necessária a adoção de uma nova estratégia. Para o acionamento da válvula proporcional (M106) e do relé de controle analógico da bomba (K1), é necessário avaliar a substituição dos resistores de entrada do optoacoplador por valores menores e validar se essa alteração permite o acionamento correto.
