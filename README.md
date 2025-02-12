@@ -451,3 +451,66 @@ A PCB foi roteada pelo Bottom Layer, os componentes PTH foram posicionados do la
 
 ## Etapa 4
 
+<<<<<<< HEAD
+=======
+Antes de fabricar a PCB, realizamos testes em bancada utilizando uma placa de prototipagem ilhada. Nela, simulamos cada tipo de circuito digital e analógico, tanto de entrada quanto de saída, para validar o funcionamento do circuito eletrônico proposto.
+
+<div align ="center">
+<img src="imagens/Placa_teste.jpg"
+     width="60%"
+     style="padding: 10px">
+</div>
+
+Com esse teste, verificamos que o resistor de 10 kΩ presente na entrada do optoacoplador no circuito digital de acionamento (como mostrado na imagem abaixo) não fornecia corrente suficiente para polarizar o transistor na saída do optoacoplador, o que limitava a tensão de saída. Para a produção da placa, substituímos esse resistor por um de 1 kΩ
+
+<div align ="center">
+<img src="imagens/Esquematico_out_digital.png"
+     width="60%"
+     style="padding: 10px">
+</div>
+
+A placa foi desenvolvida no laboratório de protótipos(LPDE) do IFSC pelo método de transferência por toner. O circuito desenvolvido no Altium foi impresso em papel glossy com uma impressora a laser. A placa de fenolite foi cortada no tamanho desejado e sua superfície de cobre foi limpa com lixa fina e álcool isopropílico. Em seguida, o papel impresso foi posicionado sobre a placa e submetido a calor e pressão por meio de um ferro de passar roupa, garantindo a transferência do toner para o cobre. Após o resfriamento, a placa foi imersa em água morna para remoção do papel, revelando as trilhas de toner aderidas. O próximo passo foi utilizar percloreto de ferro para corroer as áreas de cobre não protegidas. Concluída a corrosão, o toner foi removido com álcool isopropílico, deixando apenas as trilhas condutoras. Para finalizar, foram realizados os furos para conexão dos componentes e aplicado um verniz protetor. O processo resultou em uma PCB funcional, com algumas trilhas apresentando falhas devido à pressão e temperatura da transferência, indicando a necessidade de ajustes para otimização da qualidade final.
+
+<div align ="center">
+<img src="imagens/Placa_Finalizada.png"
+     width="60%"
+     style="padding: 10px">
+</div>
+
+A placa foi conectada à bancada (conforme ilustrado na figura abaixo) para verificar seu funcionamento e realizar os testes necessários para validação.
+
+<div align ="center">
+<img src="imagens/Placa_Conectores.jpg"
+     width="60%"
+     style="padding: 10px">
+</div>
+
+Para integrar a placa desenvolvida à bancada, optamos por projetar um suporte 3D em vez de um gabinete, visando facilitar o acesso aos conectores e componentes. Essa escolha permite maior flexibilidade para testes e medições com multímetro, alinhando-se à natureza didática da bancada.
+O suporte foi projetado com 22 cm de largura e 17,5 cm de altura, para ser encaixado entre as esteiras presentes na estrutura da bancada.
+
+<div align ="center">
+<img src="imagens/Suporte_3D.jpg"
+     width="60%"
+     style="padding: 10px">
+</div>
+
+A placa fixada junto a bancada é mostrada na figura abaixo.
+
+<div align ="center">
+<img src="imagens/Placa_suporte_bancada.jpg"
+     width="60%"
+     style="padding: 10px">
+</div>
+
+### Descrição geral do funcionamento
+
+### Conclusão dos testes realizados
+
+Mesmo após substituir o resistor na entrada do optoacoplador no circuito digital de acionamento por um de 1 kΩ, a corrente ainda não foi suficiente para polarizar o transistor. Para corrigir essa limitação, realizamos uma nova troca, reduzindo os resistores para 330 Ω, o que permitiu o acionamento da bomba de água (M1).
+
+Para uma análise mais detalhada, testamos o circuito digital aplicando uma tensão direta de 24V e, utilizando um multímetro no modo amperímetro, medimos a corrente necessária para o acionamento de cada componente. Os valores obtidos foram: M106 requer 18 mA, E104 requer 9,6 mA, M102 requer 200 mA, M1 requer 10,8 mA e K1 requer 26 mA. Com base nesses resultados, concluímos que o acionamento da válvula esférica (M102) ultrapassa o limite de corrente suportado pelo optoacoplador, que, conforme o datasheet, é de 50 mA Dessa forma, não é possível acionar a válvula com a configuração atual do circuito eletrônico, sendo necessária a adoção de uma nova estratégia. Para o acionamento da válvula proporcional (M106) e do relé de controle analógico da bomba (K1), é necessário avaliar a substituição dos resistores de entrada do optoacoplador por valores menores e validar se essa alteração permite o acionamento correto.
+
+O circuito de entradas digitais foi testado por meio da simulação do manuseio de alguns sensores, permitindo o monitoramento do seu comportamento pela interface web do sistema. Os testes confirmaram que o circuito projetado apresentou o desempenho esperado.
+
+O circuito de entradas e saídas analógicas atendeu corretamente aos requisitos do projeto, apresentando resultados condizentes com as especificações definidas no projeto inicial.
+>>>>>>> 2b2e88902f92bcfcba9dbc2a12d51e2e23655b48
