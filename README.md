@@ -502,7 +502,7 @@ A placa fixada junto a bancada é mostrada na figura abaixo.
 
 ### Descrição geral do funcionamento
 
-Ao alimentar o sistema, a ESP abre o access point com nome da rede e senha configurados no código. Após conectar o dispositivo ao access point, é necessário acessar o IP da ESP (192.168.4.1) utilizando um navegador web. Dessa forma, o usuário terá acesso à interface: 
+Ao energizar o sistema, o ESP32 inicia um access point com o nome de rede (ESP32_AP) e a senha configurados no código. Após conectar um dispositivo a esse access point, o usuário deve acessar o IP do ESP32 (192.168.4.1) por meio de um navegador web. Dessa forma, a interface será exibida, conforme ilustrado na imagem a seguir, apresentando todas as informações dos sensores e atuadores digitais e analógicos. Na interface do sistema, o usuário poderá interagir com os atuadores digitais, controlar os acionadores analógicos e monitorar os sensores em tempo real.
 
 <div align ="center">
 <img src="imagens/webpage.PNG"
@@ -510,7 +510,7 @@ Ao alimentar o sistema, a ESP abre o access point com nome da rede e senha confi
      style="padding: 10px">
 </div>
 
-O firmware da interface está descrito de forma detalhada em um arquivo à parte que pode ser acessado pelo link: [Descrição do Firmware](/firmware/README.md)
+O firmware da interface está descrito de forma mais detalhada em um arquivo que pode ser acessado pelo link: [Descrição do Firmware](/firmware/README.md)
 
 
 ### Conclusão dos testes realizados
