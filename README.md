@@ -451,8 +451,6 @@ A PCB foi roteada pelo Bottom Layer, os componentes PTH foram posicionados do la
 
 ## Etapa 4
 
-<<<<<<< HEAD
-=======
 Antes de fabricar a PCB, realizamos testes em bancada utilizando uma placa de prototipagem ilhada. Nela, simulamos cada tipo de circuito digital e analógico, tanto de entrada quanto de saída, para validar o funcionamento do circuito eletrônico proposto.
 
 <div align ="center">
@@ -513,4 +511,3 @@ Para uma análise mais detalhada, testamos o circuito digital aplicando uma tens
 O circuito de entradas digitais foi testado por meio da simulação do manuseio de alguns sensores, permitindo o monitoramento do seu comportamento pela interface web do sistema. Os testes confirmaram que o circuito projetado apresentou o desempenho esperado.
 
 O circuito de entradas e saídas analógicas atendeu corretamente aos requisitos do projeto, apresentando resultados condizentes com as especificações definidas no projeto inicial.
->>>>>>> 2b2e88902f92bcfcba9dbc2a12d51e2e23655b48
