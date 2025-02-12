@@ -502,6 +502,17 @@ A placa fixada junto a bancada é mostrada na figura abaixo.
 
 ### Descrição geral do funcionamento
 
+Ao alimentar o sistema, a ESP abre o access point com nome da rede e senha configurados no código. Após conectar o dispositivo ao access point, é necessário acessar o IP da ESP (192.168.4.1) utilizando um navegador web. Dessa forma, o usuário terá acesso à interface: 
+
+<div align ="center">
+<img src="imagens/webpage.PNG"
+     width="60%"
+     style="padding: 10px">
+</div>
+
+O firmware da interface está descrito de forma detalhada em um arquivo à parte que pode ser acessado pelo link: [Descrição do Firmware](/firmware/README.md)
+
+
 ### Conclusão dos testes realizados
 
 Mesmo após substituir o resistor na entrada do optoacoplador no circuito digital de acionamento por um de 1 kΩ, a corrente ainda não foi suficiente para polarizar o transistor. Para corrigir essa limitação, realizamos uma nova troca, reduzindo os resistores para 330 Ω, o que permitiu o acionamento da bomba de água (M1).
