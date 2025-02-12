@@ -522,3 +522,5 @@ Para uma análise mais detalhada, testamos o circuito digital aplicando uma tens
 O circuito de entradas digitais foi testado por meio da simulação do manuseio de alguns sensores, permitindo o monitoramento do seu comportamento pela interface web do sistema. Os testes confirmaram que o circuito projetado apresentou o desempenho esperado.
 
 O circuito de entradas e saídas analógicas atendeu corretamente aos requisitos do projeto, apresentando resultados condizentes com as especificações definidas no projeto inicial.
+
+O código desenvolvido para o ESP32 é responsivo e permite a comunicação entre a bancada e a interface web de forma satisfatória. No entanto, há possibilidade de aprimoramento com a implementação de novas funcionalidades, como uma interface web mais intuitiva para o usuário, melhorias na responsividade para diferentes dispositivos e a inclusão de gráficos para exibir as leituras dos sensores.
